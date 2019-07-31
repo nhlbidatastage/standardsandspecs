@@ -1,0 +1,3 @@
+# Data Dictionary Parser Output File
+
+YYYYMMDDhhmmss_phsfullaccession_phtfullaccession_ddparse.json
