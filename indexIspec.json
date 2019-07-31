@@ -3,5 +3,7 @@
 "$id":"http://...",
 "title": "Index I Specification",
 "description": "Content and formatting specification for the output of the data dictionary parser tool",
-"type":"object"
+"type":"object",
+"properties":{
+
 }
