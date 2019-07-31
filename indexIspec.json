@@ -1,0 +1,7 @@
+{
+"$schema":"http://json-schema.org/draft-07/schema#",
+"$id":"http://...",
+"title": "Index I Specification",
+"description": "Content and formatting specification for the output of the data dictionary parser tool",
+"type":"object"
+}
