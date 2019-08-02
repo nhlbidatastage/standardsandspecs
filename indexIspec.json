@@ -1,9 +1,48 @@
 {
 "$schema":"http://json-schema.org/draft-07/schema#",
-"$id":"http://...",
-"title": "Index I Specification",
-"description": "Content and formatting specification for the output of the data dictionary parser tool",
+"$id":"https://github.com/nhlbidatastage/standardsandspecs/indexIspec.json",
+"title":"Index I Specification",
+"description":"Content and formatting specification for the output of the data dictionary parser tool",
 "type":"object",
 "properties":{
-
+"VARIABLE_ACC": {
+"description":"The unique identifier for a variable",
+"type":"string"
+},
+"DATASET_ACC": {
+"description":"The unique identifier for a data set",
+"type":"string"
+},
+"DATASET_PARTICIPANT_SET": {
+"description":"   ",
+"type":"   "
+},
+"STUDY_ACC": {
+"description":"The unique identifier for a study",
+"type":"string"
+},
+"DATASET_DESC": {
+"description":"Researcher-supplied description of the data set",
+"type":"string"
+},
+"VARNAME": {
+"description":"Researcher-supplied variable name",
+"type":"string"
+},
+"VARDESC": {
+"description":"Researcher-supplied description of the variable",
+"type":"string"
+},
+"UNITS": {
+"description":"Unit of measure in which the variable is reported",
+"type":"string"
+},
+"ENCODED_VALUES": {
+"description":"A list of the codes and their meaning for categorical variable values",
+"type":"object",
+"minItems":2,
+"uniqueItems":true
+}
+},
+"required":["VARIABLE_ACC","DATASET_ACC","STUDY_ACC","VARNAME"]
 }
