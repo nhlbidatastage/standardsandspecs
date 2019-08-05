@@ -2,7 +2,7 @@
 "$schema":"http://json-schema.org/draft-07/schema#",
 "$id":"https://github.com/nhlbidatastage/standardsandspecs/indexIspec.json",
 "title":"Index I Specification",
-"description":"Content and formatting specification for the output of the data dictionary parser tool",
+"description":"Content and formatting specification for the output of the data dictionary parser tool. More information can be found at PMID:17898773",
 "type":"object",
 "properties":{
 "VARIABLE_ACC": {
@@ -22,7 +22,7 @@
 "type":"string"
 },
 "DATASET_PARTICIPANT_SET": {
-"description":"   ",
+"description":"This number indicates the participant set. This number changes as subjects change or withdraw consent.",
 "type":"integer"
 },
 "STUDY_ACC": {
