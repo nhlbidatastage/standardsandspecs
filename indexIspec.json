@@ -10,7 +10,7 @@
 "type":"string"
 },
 "VARIABLE_VERSION": {
-"description":"The version of the variable."
+"description":"The version of the variable.",
 "type":"integer"
 },
 "DATASET_ACC": {
@@ -18,10 +18,10 @@
 "type":"string"
 },
 "DATASET_VERSION": {
-"description":"The version of the data set."
+"description":"The version of the data set.",
 "type":"string"
 },
-"DATASET_PARTICIPANT_SET": {
+"STUDY_PARTICIPANT_SET": {
 "description":"This number indicates the participant set. This number changes as subjects change or withdraw consent.",
 "type":"integer"
 },
@@ -30,11 +30,11 @@
 "type":"string"
 },
 "STUDY_VERSION": {
-"description":"The version of the study."
+"description":"The version of the study.",
 "type":"integer"
 },
-"STUDY_NAME": {
-"description":"Researcher-supplied study name"
+"DATASET_NAME": {
+"description":"Researcher-supplied study name",
 "type":"string"
 },
 "DATASET_DESC": {
