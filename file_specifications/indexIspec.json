@@ -1,64 +1,71 @@
 {
-"$schema":"http://json-schema.org/draft-07/schema#",
-"$id":"https://github.com/nhlbidatastage/standardsandspecs/indexIspec.json",
-"title":"Index I Specification",
-"description":"Content and formatting specification for the output of the data dictionary parser tool. More information can be found at PMID:17898773",
-"type":"object",
-"properties":{
-"VARIABLE_ACC": {
-"description":"The unique identifier for a variable",
-"type":"string"
-},
-"VARIABLE_VERSION": {
-"description":"The version of the variable.",
-"type":"integer"
-},
-"DATASET_ACC": {
-"description":"The unique identifier for a data set",
-"type":"string"
-},
-"DATASET_VERSION": {
-"description":"The version of the data set.",
-"type":"string"
-},
-"STUDY_PARTICIPANT_SET": {
-"description":"This number indicates the participant set. This number changes as subjects change or withdraw consent.",
-"type":"integer"
-},
-"STUDY_ACC": {
-"description":"The unique identifier for a study",
-"type":"string"
-},
-"STUDY_VERSION": {
-"description":"The version of the study.",
-"type":"integer"
-},
-"DATASET_NAME": {
-"description":"Researcher-supplied study name",
-"type":"string"
-},
-"DATASET_DESC": {
-"description":"Researcher-supplied description of the data set",
-"type":"string"
-},
-"VARNAME": {
-"description":"Researcher-supplied variable name",
-"type":"string"
-},
-"VARDESC": {
-"description":"Researcher-supplied description of the variable",
-"type":"string"
-},
-"UNITS": {
-"description":"Unit of measure in which the variable is reported",
-"type":"string"
-},
-"ENCODED_VALUES": {
-"description":"A list of the codes and their meaning for categorical variable values",
-"type":"object",
-"minItems":2,
-"uniqueItems":true
-}
-},
-"required":["VARIABLE_ACC","VARIABLE_VERSION","DATASET_ACC","DATASET_VERSION","STUDY_ACC","VARNAME"]
-}
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://github.com/nhlbidatastage/standardsandspecs/indexIspec.json",
+    "title": "Index I Specification",
+    "description": "Content and formatting specification for the output of the data dictionary parser tool. More information can be found at PMID:17898773",
+    "type": "object",
+    "properties": {
+      "variable_accession": {
+        "description": "The unique identifier for a variable",
+        "type": "string"
+      },
+      "variable_version": {
+        "description": "The version of the variable.",
+        "type": "integer"
+      },
+      "dataset_accession": {
+        "description": "The unique identifier for a data set",
+        "type": "string"
+      },
+      "dataset_version": {
+        "description": "The version of the data set.",
+        "type": "string"
+      },
+      "study_participant_set": {
+        "description": "This number indicates the participant set. This number changes as subjects change or withdraw consent.",
+        "type": "integer"
+      },
+      "study_accession": {
+        "description": "The unique identifier for a study",
+        "type": "string"
+      },
+      "study_version": {
+        "description": "The version of the study.",
+        "type": "integer"
+      },
+      "dataset_name": {
+        "description": "Researcher-supplied study name",
+        "type": "string"
+      },
+      "dataset_description": {
+        "description": "Researcher-supplied description of the data set",
+        "type": "string"
+      },
+      "variable_name": {
+        "description": "Researcher-supplied variable name",
+        "type": "string"
+      },
+      "variable_description": {
+        "description": "Researcher-supplied description of the variable",
+        "type": "string"
+      },
+      "units": {
+        "description": "Unit of measure in which the variable is reported",
+        "type": "string"
+      },
+      "encoded_values": {
+        "description": "A list of the codes and their meaning for categorical variable values",
+        "type": "object",
+        "minItems": 2,
+        "uniqueItems": true
+      }
+    },
+    "required": [
+      "variable_accession",
+      "variable_version",
+      "dataset_accession",
+      "dataset_version",
+      "study_accession",
+      "variable_name"
+    ]
+  }
