@@ -1,52 +1,45 @@
 {
-"$schema":"http://json-schema.org/draft-07/schema#",
-"$id":"https://github.com/nhlbidatastage/standardsandspecs/indexIIspec.json",
-"title":"Index II Specification",
-"description":"Content and formatting specification for the output of the NLP tool.",
-"type":"object",
-"properties":{
-"VARIABLE_ACC": {
-"description":"The unique identifier for a variable",
-"type":"string"
-},
-"VARIABLE_VERSION": {
-"description":"The version of the variable.",
-"type":"integer"
-},
-"ENTITY_OF_INTEREST": {
-"description":"The entity of interest from the variable description.",
-"type":"string"
-},
-"SEMANTIC_TYPE": {
-"description":"The type of the entity of interest, e.g. disease, drug, etc.",
-"type":"string"
-},
-"UMLS_CUI": {
-"description":"A concept unique identifier used in the Unified Medical Language System.",
-"type":"string"
-},
-"UMLS_CUI_ASSERTION": {
-"description":"These are annotation qualifiers, e.g. present, absent, possible, rare, etc.",
-"type":"string"
-},
-"CONCEPT_SCORE": {
-"description":"This is a measure of the likelihood that the concept is correctly applied.",
-"type":"integer"
-},
-"VARNAME": {
-"description":"Researcher-supplied variable name",
-"type":"string"
-},
-"VARDESC": {
-"description":"Researcher-supplied description of the variable",
-"type":"string"
-},
-"UMLS_LINKS": {
-"description":"A list of CURIES that are linked to the UMLS CUI.",
-"type":"object",
-"minItems":1,
-"uniqueItems":true
-}
-},
-"required":["VARIABLE_ACC","VARIABLE_VERSION","VARNAME","ENTITY_OF_INTEREST","SEMANTIC_TYPE","UMLS_CUI"]
-}
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://github.com/nhlbidatastage/standardsandspecs/indexIIspec.json",
+    "title": "Index II Specification",
+    "description": "Content and formatting specification for the output of the NLP tool.",
+    "type": "object",
+    "allOf": [
+      {
+        "$ref": "https://raw.githubusercontent.com/nhlbidatastage/standardsandspecs/master/file_specifications/indexIspec.json"
+      }
+    ],
+    "properties": {
+      "entity_of_interest": {
+        "description": "The entity of interest from the variable description.",
+        "type": "string"
+      },
+      "semantic_type": {
+        "description": "The type of the entity of interest, e.g. disease, drug, etc.",
+        "type": "string"
+      },
+      "concept_identifier": {
+        "description": "A unique concept identifier from Unified Medical Language System (UMLS) or any OBO ontology.",
+        "type": "string"
+      },
+      "annotation_qualifier": {
+        "description": "These are annotation qualifiers, e.g. present, absent, possible, rare, etc.",
+        "type": "string"
+      },
+      "concept_score": {
+        "description": "This is a measure of the likelihood that the concept is correctly applied.",
+        "type": "integer"
+      },
+      "concept_xrefs": {
+        "description": "A list of CURIEs that are linked to the concept_identifier.",
+        "type": "object",
+        "minItems": 1,
+        "uniqueItems": true
+      }
+    },
+    "required": [
+      "entity_of_interest",
+      "semantic_type",
+      "concept_identifier"
+    ]
+  }
